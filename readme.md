@@ -45,3 +45,11 @@ ${project_root}/cv-output-pdf
 ./command/genMysqlDump.sh
 ```
 
+
+## WHERE IS CV DB DUMP .SQL
+
+in the folder:
+```
+${project_root}/docker/mysql/dumps
+```
+
