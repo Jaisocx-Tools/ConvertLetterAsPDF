@@ -26,7 +26,7 @@ body {
 
 .header1 .img {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
     width: 180px;

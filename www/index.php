@@ -21,7 +21,8 @@ if (!$pdo) {
 <body>
     <header class="header1">
         <div class="img">
-            <img src="images/Photo.jpg">
+        <!--<img src="images/Photo.jpg">-->
+        <img src="images/EliasWhiteTShirt.jpg">
         </div>
         <div class="name">
             <h1>Elias Polianskyi</h1>
