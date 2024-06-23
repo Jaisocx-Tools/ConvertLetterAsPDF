@@ -5,6 +5,7 @@
 docker-compose up -d
 ```
 
+
 if princexml container error "architecture mismatch"
 try other package, commented in the 
 docker/princexml/Dockerfile, lines 25-27
@@ -15,6 +16,7 @@ docker/princexml/Dockerfile, lines 25-27
 ./command/importMysqlDump.sh
 ```
 
+
 ## URL
 ```
 edit /etc/hosts:
@@ -23,10 +25,12 @@ edit /etc/hosts:
 
 http://jaisocx:2293/
 
+
 ## GEN PDF
 ```
 ./command/genPdf.sh
 ```
+
 
 ## WHERE IS CV IN .PDF
 
@@ -35,7 +39,9 @@ the cv in .pdf format is in the folder:
 ${project_root}/cv-output-pdf
 ```
 
+
 ## EXPORT MYSQL DB
 ```
 ./command/genMysqlDump.sh
 ```
+
