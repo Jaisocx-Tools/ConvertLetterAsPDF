@@ -1,0 +1,64 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: asd
+      MYSQL_DATABASE: cv
+      MYSQL_USER: cv
+      MYSQL_PASSWORD: asd
+    ports:
+      - "3314:3306"
+    volumes:
+      - ./docker/mysql/db-data/:/var/lib/mysql
+      - ./docker/mysql/dumps/:/dumps
+    networks:
+      - jaisocx_cv
+
+  jaisocx:
+    build:
+      context: ./docker/jaisocx-http
+    volumes:
+      - ./www/:/var/www/
+    depends_on:
+      - php
+    ports:
+      - 2293:80
+    networks:
+      - jaisocx_cv
+    environment:
+      PHP_FPM_HOST: "php:9000"
+      JAVA_XMS: "2g"
+      JAVA_XMX: "2g"
+  #      php hostname like php service name="php", port from docker/php/www.conf "listen" directive (listen = 0.0.0.0:9000)
+
+  php:
+    build:
+      context: ./docker/php
+      args:
+        TIMEZONE: "Europe/Zurich"
+        ENABLE_XDEBUG: 0
+    volumes:
+      - ./www/:/var/www/
+      - ./log/:/var/log/php/
+    networks:
+      - jaisocx_cv
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      PHP_IDE_CONFIG: "serverName=docker"
+
+  princexml:
+    build:
+      context: ./docker/princexml
+    volumes:
+      - ./cv-output-pdf/:/cv-output-pdf/
+    restart: always
+    networks:
+      - jaisocx_cv
+
+networks:
+  jaisocx_cv:
+    driver: bridge
+

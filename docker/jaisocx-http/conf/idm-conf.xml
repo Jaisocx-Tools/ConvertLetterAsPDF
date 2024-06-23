@@ -1,0 +1,7 @@
+<conf-idm>
+  <user id="admin" password="admin">
+    <granted-aliases>
+      <alias url="localhost:80/" access="admin,read,upload,run-application,execute-sql" />
+    </granted-aliases>
+  </user>
+</conf-idm>

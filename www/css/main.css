@@ -1,0 +1,226 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    width: 650px;
+    margin: 0 auto;
+}
+:root {
+    --page-height: 1030px;
+}
+
+.page {
+    min-height: var(--page-height);
+    max-height: var(--page-height);
+}
+
+.header1 {
+    background-image: url("/images/glittering-golden-sparkles-stockcake.jpg");
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 0 12px;
+    color: #737379;
+    box-sizing: border-box;
+}
+
+.header1 .img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border-radius: 0%;
+}
+
+.header1 .img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.header1 .name {
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.main {
+    color: #737379;
+    font-size: 10px;
+    display: flex;
+}
+
+ul {
+    padding: unset;
+    margin: 15px 0;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: stretch;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+li > i {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px;
+    color: #7fb4d9;
+}
+
+.point li:before {
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    min-height: 4px;
+    min-width: 4px;
+    background-color: #0069b4;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+h3 {
+    color: #000;
+    font-size: 16px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+h3:after {
+    content: '';
+    display: block;
+    margin-top: 5px;
+    width: 37px;
+    height: 2px;
+    background-color: #0069b4;
+}
+
+h4 {
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #000;
+}
+
+h4:after {
+    content: '';
+    display: block;
+    margin-top: 4px;
+    width: 37px;
+    height: 2px;
+    background-color: #0069b4;
+}
+
+.main {
+    position: relative;
+}
+
+.main img {
+    position: absolute;
+    opacity: 0.15;
+    transform: translateX(25%);
+}
+
+.col-left {
+    background-color: #fff;
+    width: 37%;
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.col-right {
+    background-color: #fafafa;
+    width: 63%;
+    padding: 0 12px;
+}
+
+.header2 {
+    background-image: url("/images/glittering-golden-sparkles-stockcake.jpg");
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #737379;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.header2 .name {
+    display: flex;
+    flex-direction: row;
+    width: 61%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sml {
+    font-size: 16px;
+}
+
+.smll {
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.work-experience-item {
+    color: #333;
+    width: 100%;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #abb;
+}
+
+.work-experience-item > div {
+    margin: 12px 0;
+}
+
+.work-experience-item .period {
+
+}
+
+.work-experience-item .period ul {
+    margin: unset;
+}
+
+.work-experience-item .company {
+
+}
+
+.work-experience-item .company .company-name {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.work-experience-item .company .company-location {
+    display: inline-block;
+    font-size: 10px;
+    font-variant: small-caps;
+}
+
+.work-experience-item .job-description {
+    font-size: 10px;
+    line-height: 1.4em;
+}
+

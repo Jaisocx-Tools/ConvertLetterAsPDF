@@ -1,0 +1,20 @@
+<conf>
+    <conf-idm path="/usr/lib/jaisocx-http/apps/congratulations/conf/idm-conf.xml"/>
+    <conf-http>
+        <servers>
+            <server port="80" alternative-port="2288">
+                <domain
+                    name="jaisocx"
+                    document-root="/var/www"
+                    publish-charset="UTF-8" src-charset="UTF-8">
+                    <alias art="folder"
+                           url="/"
+                           path="/var/www/"
+                           cache="update"
+                           list="true"
+                           each-folder-content-file-name="index.php"/>
+                </domain>
+            </server>
+        </servers>
+    </conf-http>
+</conf>
