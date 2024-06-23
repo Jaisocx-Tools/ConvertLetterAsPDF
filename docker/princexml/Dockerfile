@@ -21,8 +21,9 @@ RUN curl -LO https://www.princexml.com/download/prince_15.3-1_ubuntu22.04_arm64.
     dpkg -i prince_15.3-1_ubuntu22.04_arm64.deb && \
     rm prince_15.3-1_ubuntu22.04_arm64.deb
 
-# Verify installation
-#RUN prince --version
+# TRY TO USE THIS, IF ERR ARCHITECTURE MISMATCH!!!    
+#RUN curl -LO https://www.princexml.com/download/prince_15.3-1_ubuntu22.04_amd64.deb && \
+#    dpkg -i prince_15.3-1_ubuntu22.04_amd64.deb && \
+#    rm prince_15.3-1_ubuntu22.04_amd64.deb
+#
 
-# Setup default command
-#CMD ["prince", "--version"]
