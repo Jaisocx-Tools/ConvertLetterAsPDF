@@ -11,19 +11,13 @@ try other package, commented in the
 docker/princexml/Dockerfile, lines 25-27
 
 
-## IMPORT MYSQL DB
-```
-./command/importMysqlDump.sh
-```
-
-
 ## URL
 ```
 edit /etc/hosts:
 127.0.0.1    jaisocx
 ```
 
-http://jaisocx:2293/
+http://jaisocx:2297/
 
 
 ## GEN PDF
@@ -32,24 +26,12 @@ http://jaisocx:2293/
 ```
 
 
-## WHERE IS CV IN .PDF
+## WHERE IS FILE IN .PDF
 
-the cv in .pdf format is in the folder:
+the file in .pdf format is in the folder:
 ```
-${project_root}/cv-output-pdf
-```
-
-
-## EXPORT MYSQL DB
-```
-./command/genMysqlDump.sh
+${project_root}/pdf-output
 ```
 
 
-## WHERE IS CV DB DUMP .SQL
-
-in the folder:
-```
-${project_root}/docker/mysql/dumps
-```
 

@@ -1,20 +1,4 @@
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql_db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: asd
-      MYSQL_DATABASE: cv
-      MYSQL_USER: cv
-      MYSQL_PASSWORD: asd
-    ports:
-      - "3314:3306"
-    volumes:
-      - ./docker/mysql/db-data/:/var/lib/mysql
-      - ./docker/mysql/dumps/:/dumps
-    networks:
-      - jaisocx_cv
 
   jaisocx:
     build:
@@ -24,7 +8,7 @@ services:
     depends_on:
       - php
     ports:
-      - 2293:80
+      - 2297:80
     networks:
       - jaisocx_cv
     environment:
@@ -53,7 +37,7 @@ services:
     build:
       context: ./docker/princexml
     volumes:
-      - ./cv-output-pdf/:/cv-output-pdf/
+      - ./pdf-output/:/pdf-output/
     restart: always
     networks:
       - jaisocx_cv

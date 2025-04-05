@@ -1,29 +1,28 @@
-# Use Ubuntu 22.04 base image
-FROM ubuntu:22.04
+FROM alpine:3.20.3
 
-# Install necessary dependencies
-RUN apt-get update && \
-    apt-get install -y curl fontconfig
+USER root
 
-# Download and install dependencies for PrinceXML
-RUN apt-get install -y \
-    libaom3 \
-    libavif13 \
-    libjpeg8 \
-    liblcms2-2 \
-    libtiff5 \
-    libwebp7 \
-    libwebpdemux2 \
-    libxml2    
+RUN apk add --no-cache bash curl ca-certificates
+RUN apk add --no-cache freetype fontconfig ttf-dejavu libxrender
+RUN apk add --no-cache libjpeg-turbo libpng zlib
+RUN apk add --no-cache libx11 libxext libxft
+RUN apk add --no-cache glib icu-libs
+RUN apk add --no-cache libxml2 
+RUN apk add --no-cache tiff 
+RUN apk add --no-cache giflib 
+RUN apk add --no-cache libwebp 
+RUN apk add --no-cache libwebpdemux 
+RUN apk add --no-cache libavif 
+RUN apk add --no-cache aom 
+RUN apk add --no-cache lcms2
 
-# Download and install PrinceXML .deb package
-RUN curl -LO https://www.princexml.com/download/prince_15.3-1_ubuntu22.04_arm64.deb && \
-    dpkg -i prince_15.3-1_ubuntu22.04_arm64.deb && \
-    rm prince_15.3-1_ubuntu22.04_arm64.deb
 
-# TRY TO USE THIS, IF ERR ARCHITECTURE MISMATCH!!!    
-#RUN curl -LO https://www.princexml.com/download/prince_15.3-1_ubuntu22.04_amd64.deb && \
-#    dpkg -i prince_15.3-1_ubuntu22.04_amd64.deb && \
-#    rm prince_15.3-1_ubuntu22.04_amd64.deb
-#
+WORKDIR /var/lib
+
+RUN curl -LO https://www.princexml.com/download/prince-15.4.1-alpine3.20-aarch64.tar.gz
+RUN tar -xvzf prince-15.4.1-alpine3.20-aarch64.tar.gz
+WORKDIR /var/lib/prince-15.4.1-alpine3.20-aarch64
+RUN ./install.sh
+
+CMD ["tail", "-f", "/dev/null"]
 

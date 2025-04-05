@@ -1,0 +1,280 @@
+:root {
+  --hoststar-background-color: white;
+  --logo-height: 86px;
+  /*--main-font-family: Raleway;*/
+  /*--main-font-family: LilitaOne;*/
+  /*--main-font-family: AbrilFatface;*/
+  /*--main-font-family: ArchivoBlack;*/
+  /*--main-font-family: Orbitron;*/
+  /*--main-font-family: PirataOne;*/
+  --main-font-family: RedHatDisplay;
+  /*--main-font-family: Righteous;*/
+  /*--main-font-family: TitilliumWeb;*/
+  --address-font-family: var(--main-font-family);
+  --theme-font-family: var(--main-font-family);
+  --text-color-bold-light: #333;
+  --text-color-main: #222;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 800px;
+  /*border: 1px solid crimson;*/
+  padding-top: 8px;
+  padding-left: 110px;
+  padding-right: 60px;
+  padding-bottom: 0;
+}
+
+body, strong, div, span, p, li {
+  font-size: 0.9rem;
+  font-family: var(--main-font-family);
+  color: var(--text-color-main);
+}
+
+h2 {
+  font-size: 1.0rem;
+  line-height: 1.2rem;
+  color: #7d8c78;
+}
+h3 {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: #7d8c78;
+}
+
+ul, li {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li ul li {
+  list-style-type: upper-roman;
+}
+
+strong {
+  color: var(--text-color-bold-light);
+}
+
+.address-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: stretch;
+
+  margin-bottom: 50px;
+}
+
+.address-bar .address-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.address-bar .address-col div,
+.address-bar .address-col span {
+  font-family: var(--address-font-family);  
+  font-size: 0.72rem;
+}
+
+.address-bar .address-col .company {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  box-sizing: border-box;
+}
+
+.address-bar .address-col .company .logo {
+  box-sizing: border-box;
+
+  height: var(--logo-height);
+  max-height: var(--logo-height);
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.address-bar .address-col .company .logo img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.address-bar .address-col .company .companyName {
+  flex-grow: 1;
+}
+
+.address-bar .address-col .contactPerson {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-color-bold-light);
+}
+
+.address-bar .address-col .company.hoststar,
+.address-bar .address-col .company.jaisocx,
+.address-bar .address-col .adress-col-second-margin {
+  height: var(--logo-height);
+  width: 100%;
+}
+
+.address-bar .address-col .company.hoststar .logo {
+  height: 100%;
+  width: 12rem;
+  max-width: 12rem;
+  background-color: var(--hoststar-background-color);
+  padding: 8px;
+}
+
+.address-bar .address-col .company.jaisocx .logo {
+  height: 100%;
+  width: 8rem;
+  max-width: 8rem;
+}
+
+.address-bar .address-col .company.hoststar .companyName,
+.address-bar .address-col .company.jaisocx .companyName {
+  display: none;
+}
+
+.address-bar .address-col .postal-address {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.address-bar .address-col .postal-address .postal-address-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+
+  margin: 0;
+  line-height: 1rem;
+}
+
+.address-bar .address-col .postal-address .postal-address-line span {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+.address-bar .address-col .postal-address .postal-address-line .street {
+  
+}
+
+.address-bar .address-col .postal-address .postal-address-line .zip {
+  
+}
+
+.address-bar .address-col .postal-address .postal-address-line .town {
+  
+}
+
+.address-bar .address-col .postal-address .postal-address-line .land {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-color-bold-light);
+}
+
+.address-bar .address-col .email {
+  margin-top: 0.4rem;
+}
+
+.address-bar .address-col .email a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.address-bar .address-col-first {
+  width: 65%;
+}
+
+.address-bar .address-col-second {
+  width: 35%;
+}
+
+main .paragraph.theme {
+  font-family: var(--theme-font-family);
+  color: var(--text-color-bold-light);
+  font-size: 1rem;
+  line-height: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+}
+
+main .text {
+  margin-bottom: 1.7rem;
+}
+
+main .paragraph,
+main .line {
+  display: block;
+  width: 100%;
+  text-align: justify;
+  line-height: 1.3rem;
+}
+
+main .paragraph {
+  margin: 1.2rem 0;
+}
+main .line {
+  margin: 0.2rem 0;
+}
+
+main .regards,
+main .name {
+  font-family: Satisfy;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+main .signature {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+main .signature .date-and-place {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+main .signature .signature-img-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  height: 2.3rem;
+  width: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+main .signature .signature-img-parent img {
+  display: block;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
