@@ -2,6 +2,6 @@
 /**/.DS_Store
 /command/genPdf.old.sh
 /log/
-/pdf-output/*.pdf
+/pdf_doc/letter.pdf
 /www_archive/
-
+/pdf_doc_archive/

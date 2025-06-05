@@ -1,20 +1,21 @@
 services:
 
-  jaisocx:
+  letter:
     build:
       context: ./docker/jaisocx-http
     volumes:
       - ./www/:/var/www/
+      - ./pdf_doc/:/var/pdf_doc/
     depends_on:
       - php
     ports:
-      - 2297:80
+      - 2297:2297
     networks:
       - jaisocx_cv
     environment:
       PHP_FPM_HOST: "php:9000"
-      JAVA_XMS: "2g"
-      JAVA_XMX: "2g"
+      JAVA_XMS: "100m"
+      JAVA_XMX: "500m"
   #      php hostname like php service name="php", port from docker/php/www.conf "listen" directive (listen = 0.0.0.0:9000)
 
   php:
@@ -37,7 +38,7 @@ services:
     build:
       context: ./docker/princexml
     volumes:
-      - ./pdf-output/:/pdf-output/
+      - ./pdf_doc/:/var/pdf_doc/
     restart: always
     networks:
       - jaisocx_cv

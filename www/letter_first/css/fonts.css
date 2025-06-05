@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Raleway;
+  src: url('/letter_first/fonts/Raleway/static/Raleway-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('/letter_first/fonts/Raleway/static/Raleway-Black.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: LilitaOne;
+  src: url('/letter_first/fonts/Lilita_One/LilitaOne-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Satisfy;
+  src: url('/letter_first/fonts/Satisfy/Satisfy-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AbrilFatface;
+  src: url('/letter_first/fonts/Abril_Fatface/AbrilFatface-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: ArchivoBlack;
+  src: url('/letter_first/fonts/Archivo_Black/ArchivoBlack-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url('/letter_first/fonts/Orbitron/static/Orbitron-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: PirataOne;
+  src: url('/letter_first/fonts/Pirata_One/PirataOne-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url('/letter_first/fonts/Red_Hat_Display/static/RedHatDisplay-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url('/letter_first/fonts/Red_Hat_Display/static/RedHatDisplay-Black.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Righteous;
+  src: url('/letter_first/fonts/Righteous/Righteous-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: TitilliumWeb;
+  src: url('/letter_first/fonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+

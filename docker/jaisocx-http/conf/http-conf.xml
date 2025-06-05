@@ -2,9 +2,12 @@
     <conf-idm path="/usr/lib/jaisocx-http/apps/congratulations/conf/idm-conf.xml"/>
     <conf-http>
         <servers>
-            <server port="80" alternative-port="2288">
-                <domain
-                    name="jaisocx"
+            <server 
+              port="2297" 
+              alternative-port="2288"
+              secure="false">
+                <domain 
+                    name="letter"
                     document-root="/var/www"
                     publish-charset="UTF-8" src-charset="UTF-8">
                     <alias art="folder"
@@ -13,6 +16,12 @@
                            cache="update"
                            list="true"
                            each-folder-content-file-name="index.php"/>
+                    <alias art="folder"
+                           url="/pdf_doc/"
+                           path="/var/pdf_doc/"
+                           cache="update"
+                           list="true"
+                           each-folder-content-file-name="index.html"/>
                 </domain>
             </server>
         </servers>
