@@ -1,3 +1,7 @@
-docker/mysql/db-data/
-log/
-**/.DS_Store
+/.DS_Store
+/**/.DS_Store
+/command/genPdf.old.sh
+/log/
+/pdf-output/*.pdf
+/www_archive/
+
