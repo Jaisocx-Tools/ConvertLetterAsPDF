@@ -54,14 +54,14 @@ echo "127.0.0.1    letter" >> /etc/hosts
 
 The host name has to be equal to the name of the dockerized service Jaisocx Sites Server in the `docker-compose.yml` on *line 3*. This host name is requested by the PrinceXML service, and has to be the dockerized service name, when converting html page to a pdf doc in the script `command/genPdf.sh` on *line 3*: 
 
-```
+```bash
 ... prince http://letter/ ...
 ```
 
 
 The Jaisocx Sites Server sends site to browser when the host name matches the domain name in the conf on *line 10*:
 
-```
+```xml
 <domain name="letter"
 ```
 
@@ -76,9 +76,9 @@ The Jaisocx Sites Server sends site to browser when the host name matches the do
 1. First build services one after one and bugfix errors.
 
 
-*if princexml container error "architecture mismatch"
+*When docker builds the PrinceXML service, and the error message is shown in the terminal "architecture mismatch", 
 try other package, commented in the 
-docker/princexml/Dockerfile, lines 25-27*
+`docker/princexml/Dockerfile`, lines 25-27*
 
 ```bash
 ### if php service in docker-compose.yml decommented
