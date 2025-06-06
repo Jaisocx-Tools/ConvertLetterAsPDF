@@ -3,9 +3,9 @@
 
 
 
-![readme/images/page_in_browser_live.jpg](readme/images/page_in_browser_live.jpg)
+![readme/images/page_in_browser.jpg](readme/images/page_in_browser.jpg)
 
-![readme/images/doc_in_browser_live.jpg](readme/images/doc_in_browser_live.jpg)
+![readme/images/doc_in_browser.jpg](readme/images/doc_in_browser.jpg)
 
 
 
