@@ -28,10 +28,10 @@
 
 
 
-## START HTTPS ENDPOINT ON YOUR MACHINE
+## HOW TO START THE HTTP ENDPOINT ON YOUR MACHINE TO PREVIEW COVER LETTER IN A SITES BROWSER
 
 
-### Register local url
+### How to register local url
 
 in the file `/etc/hosts` add Your machine's local IPv4 address *127.0.0.1* and the host name *letter* like this:
 
@@ -80,16 +80,21 @@ The Jaisocx Sites Server sends site to browser when the host name matches the do
 try other package, commented in the 
 docker/princexml/Dockerfile, lines 25-27*
 
-```
-docker compose build php
-docker compose build http
+```bash
+### if php service in docker-compose.yml decommented
+# docker compose build php
+
+# http endpoint
+docker compose build letter
+
+# PrinceXML lib converts .html pages to .pdf docs
 docker compose build princexml
 ```
 
 
 2. Try to start all dockerized services and the docker network 
 
-```
+```bash
 docker-compose up -d
 ```
 

@@ -6,8 +6,9 @@ services:
     volumes:
       - ./www/:/var/www/
       - ./pdf_doc/:/var/pdf_doc/
-    depends_on:
-      - php
+### decomment on demand to program in php
+    # depends_on:
+    #   - php
     ports:
       - 2297:2297
     networks:
@@ -16,23 +17,26 @@ services:
       PHP_FPM_HOST: "php:9000"
       JAVA_XMS: "100m"
       JAVA_XMX: "500m"
-  #      php hostname like php service name="php", port from docker/php/www.conf "listen" directive (listen = 0.0.0.0:9000)
+  #####      php hostname like php service name="php", port from docker/php/www.conf "listen" directive (listen = 0.0.0.0:9000)
 
-  php:
-    build:
-      context: ./docker/php
-      args:
-        TIMEZONE: "Europe/Zurich"
-        ENABLE_XDEBUG: 0
-    volumes:
-      - ./www/:/var/www/
-      - ./log/:/var/log/php/
-    networks:
-      - jaisocx_cv
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    environment:
-      PHP_IDE_CONFIG: "serverName=docker"
+
+
+### decomment on demand to program in php
+  # php:
+  #   build:
+  #     context: ./docker/php
+  #     args:
+  #       TIMEZONE: "Europe/Zurich"
+  #       ENABLE_XDEBUG: 0
+  #   volumes:
+  #     - ./www/:/var/www/
+  #     - ./log/:/var/log/php/
+  #   networks:
+  #     - jaisocx_cv
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   environment:
+  #     PHP_IDE_CONFIG: "serverName=docker"
 
   princexml:
     build:
