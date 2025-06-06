@@ -55,13 +55,27 @@ echo "127.0.0.1    letter" >> /etc/hosts
 The host name has to be equal to the name of the dockerized service Jaisocx Sites Server in the `docker-compose.yml` on *line 3*. This host name is requested by the PrinceXML service, and has to be the dockerized service name, when converting html page to a pdf doc in the script `command/genPdf.sh` on *line 3*: 
 
 ```bash
+### command/genPdf.sh
 ... prince http://letter/ ...
 ```
 
 
+```yaml
+### docker-compose.yml
+services:
+
+  letter:
+    build:
+      context: ./docker/jaisocx-http
+    volumes:
+      - ./www/:/var/www/
+      - ./pdf_doc/:/var/pdf_doc/
+```
+
 The Jaisocx Sites Server sends site to browser when the host name matches the domain name in the conf on *line 10*:
 
 ```xml
+### docker/jaisocx-http/conf/http-conf.xml
 <domain name="letter"
 ```
 
