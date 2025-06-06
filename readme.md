@@ -116,13 +116,13 @@ docker-compose up -d
 the .pdf doc is here:
 
 
-[pdf-output/letter.pdf](pdf-output/letter.pdf)
+[pdf_doc/letter.pdf](pdf_doc/letter.pdf)
 
 [http://letter:2297/pdf_doc/](http://letter:2297/pdf_doc/)
 
 
 ```
-${project_root}/pdf-output/letter.pdf
+${project_root}/pdf_doc/letter.pdf
 ```
 
 
