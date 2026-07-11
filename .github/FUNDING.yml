@@ -1,4 +1,2 @@
-# These are supported funding model platforms
-
-github: [ "jaisocx" ]
-custom: [ "https://wise.com/pay/r/kKuwC1Bmzsu6Q2Q" ]
+github: [ "oracle", "angular", "laravel", "symfony", "jaisocx" ]
+custom: [ "https://wise.com/pay/r/YYGyvmrcWW8-ezs" ]
